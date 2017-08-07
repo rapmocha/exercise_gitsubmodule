@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include "../lodepng/lodepng.h"
+#include "lodepng/lodepng.h"
 
 int main() {
   const std::string filename = "resources/keyboard.png";
