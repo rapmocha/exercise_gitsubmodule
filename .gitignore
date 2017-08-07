@@ -7,6 +7,8 @@
 # !*.py
 # !*.bash
 ###################
+build/*
+!.gitkeep
 
 # Created by https://www.gitignore.io/api/linux,osx,vim
 
