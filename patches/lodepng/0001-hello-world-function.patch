@@ -1,0 +1,46 @@
+From 891b120cead5ff3736a532c916619734624f112f Mon Sep 17 00:00:00 2001
+From: rapmocha <rapmocha@gmail.com>
+Date: Sun, 10 Sep 2017 19:22:13 +0900
+Subject: [PATCH] hello world function
+
+---
+ lodepng.cpp | 6 ++++++
+ lodepng.h   | 5 +++++
+ 2 files changed, 11 insertions(+)
+
+diff --git a/lodepng.cpp b/lodepng.cpp
+index bf237df..68ca6bb 100644
+--- a/lodepng.cpp
++++ b/lodepng.cpp
+@@ -34,6 +34,12 @@ Rename this file to lodepng.cpp to use it for C++, or to lodepng.c to use it for
+ #include <stdio.h>
+ #include <stdlib.h>
+ 
++namespace lodepng {
++  void hello() {
++    std::cout << "hello world" << std::endl;
++  }
++} // namespace lodepng
++
+ #if defined(_MSC_VER) && (_MSC_VER >= 1310) /*Visual Studio: A few warning types are not desired here.*/
+ #pragma warning( disable : 4244 ) /*implicit conversions: not warned by gcc -Wall -Wextra and requires too much casts*/
+ #pragma warning( disable : 4996 ) /*VS does not like fopen, but fopen_s is not standard C so unusable here*/
+diff --git a/lodepng.h b/lodepng.h
+index 8c634d2..6382932 100644
+--- a/lodepng.h
++++ b/lodepng.h
+@@ -28,6 +28,11 @@ freely, subject to the following restrictions:
+ 
+ #include <string.h> /*for size_t*/
+ 
++#include <iostream>
++namespace lodepng {
++  void hello();
++}
++
+ extern const char* LODEPNG_VERSION_STRING;
+ 
+ /*
+-- 
+2.13.3
+

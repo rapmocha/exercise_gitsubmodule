@@ -11,6 +11,8 @@ int main() {
   std::vector<unsigned char> image;
   unsigned width, height;
 
+  lodepng::hello();
+
   // decode
   {
     unsigned error = lodepng::decode(image, width, height, filename);
